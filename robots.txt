@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simplesoftwares.github.io/365-Days-Tracker/sitemap.xml
