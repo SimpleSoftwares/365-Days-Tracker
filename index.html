@@ -69,7 +69,8 @@
  <button data-action="backup">↓ &nbsp; Download backup</button>
  <button data-action="restore">↑ &nbsp; Restore backup</button>
  <button data-action="privacy">🔒 &nbsp; Privacy & data</button>
- <button data-action="about">ⓘ &nbsp; About</button>
+ <button data-action="about">ⓘ &nbsp; About 365 Days Tracker</button>
+ <button data-action="brand">◈ &nbsp; About SimpleSoftwares</button>
 </nav>
 <main class="wrap">
 <section class="page active" id="homePage">
@@ -246,7 +247,7 @@ $('goTracker').onclick=()=>openTracker();$('homeCreate').onclick=$('homeNew').on
 $('homeStats').onclick=()=>{renderStats();page('stats');};
 $('editTracker').onclick=()=>trackerForm(current());$('saveNote').onclick=saveNote;
 $('menuBtn').onclick=()=>$('menu').classList.toggle('open');
-$('menu').onclick=e=>{const b=e.target.closest('button');if(!b)return;const a=b.dataset.action;$('menu').classList.remove('open');if(a==='home')home();if(a==='tracker')openTracker();if(a==='all')page('all');if(a==='stats'){renderStats();page('stats');}if(a==='settings')settings();if(a==='backup')backup();if(a==='restore')$('restoreFile').click();if(a==='about')about();if(a==='privacy')privacy();};
+$('menu').onclick=e=>{const b=e.target.closest('button');if(!b)return;const a=b.dataset.action;$('menu').classList.remove('open');if(a==='home')home();if(a==='tracker')openTracker();if(a==='all')page('all');if(a==='stats'){renderStats();page('stats');}if(a==='settings')settings();if(a==='backup')backup();if(a==='restore')$('restoreFile').click();if(a==='about')about();if(a==='brand')window.location.href='./about.html';if(a==='privacy')privacy();};
 document.addEventListener('click',e=>{if(!e.target.closest('#menu')&&!e.target.closest('#menuBtn'))$('menu').classList.remove('open');});
 $('monthFilter').onchange=()=>{renderTracker();if($('monthFilter').value!=='all')$('calendarMonths').scrollIntoView({behavior:'smooth'});};
 $('closeModal').onclick=closeModal;$('modalBack').onclick=e=>{if(e.target===$('modalBack'))closeModal();};
